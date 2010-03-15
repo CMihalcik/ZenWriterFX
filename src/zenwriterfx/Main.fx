@@ -7,8 +7,6 @@ package zenwriterfx;
 
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.text.Text;
-import javafx.scene.text.Font;
 import javafx.scene.paint.Color;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
@@ -24,6 +22,7 @@ import javafx.ext.swing.SwingComponent;
 var scene: Scene;
 def theme = Theme.DEFAULT;
 var editor: SwingComponent = TextEditor.create(theme.font) as SwingComponent;
+editor.focusTraversable = true;
 
 var width: Number = bind stage.width on replace {
     editor.width = width * (theme.endX - theme.beginX);
@@ -54,3 +53,5 @@ def stage: Stage = Stage {
         fill: Color.WHITE
     }
 }
+
+editor.requestFocus();
