@@ -19,6 +19,8 @@ import javafx.ext.swing.SwingComponent;
  * @author dick
  */
 
+//my comment
+
 var scene: Scene;
 def theme = Theme.DEFAULT;
 var editor: SwingComponent = TextEditor.create(theme.font) as SwingComponent;
